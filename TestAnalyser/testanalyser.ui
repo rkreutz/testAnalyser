@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestAnalyserClass</class>
+ <widget class="QMainWindow" name="TestAnalyserClass">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>618</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Analisador de Testes Rapidos</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="5">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="analyseBtn">
+        <property name="text">
+         <string>Analizar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="regionBtn">
+        <property name="text">
+         <string>Regioes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="resetReg">
+        <property name="text">
+         <string>Resetar Regioes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="recBtn">
+        <property name="text">
+         <string>Filmar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="testeBtn">
+        <property name="text">
+         <string>Ajuste Manual</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>618</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(240, 240, 240);
+selection-color: rgb(0, 0, 0);
+selection-background-color: rgb(215, 229, 243);</string>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionCarregar_Foto"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionFile">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionCarregar_Foto">
+   <property name="text">
+    <string>Carregar Foto</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>recBtn</tabstop>
+  <tabstop>regionBtn</tabstop>
+ </tabstops>
+ <resources>
+  <include location="testanalyser.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionCarregar_Foto</sender>
+   <signal>triggered()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>loadImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>testeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>TESTE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>668</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>analyseBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>analyseRegions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>startRec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetReg</sender>
+   <signal>clicked()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>resetRegions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>309</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>465</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>regionBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TestAnalyserClass</receiver>
+   <slot>selectRegions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showCamera()</slot>
+  <slot>startRec()</slot>
+  <slot>selectRegions()</slot>
+  <slot>resetRegions()</slot>
+  <slot>analyseRegions()</slot>
+  <slot>loadImage()</slot>
+  <slot>TESTE()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="TestAnalyser"/>
+  <qresource prefix="Images">
+    <file alias="closeIcon.jpg">../close.jpg</file>
+    <file alias="cameraIcon.png">../icon.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,9 @@
+﻿Build started 10/10/2014 10:29:11.
+     1>Project "C:\Users\Rodrigo\documents\visual studio 2013\Projects\TestAnalyser\TestAnalyser\TestAnalyser.vcxproj" on node 2 (CustomBuild target(s)).
+     1>CustomBuild:
+         Uic'ing testanalyser.ui...
+     1>Done Building Project "C:\Users\Rodrigo\documents\visual studio 2013\Projects\TestAnalyser\TestAnalyser\TestAnalyser.vcxproj" (CustomBuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.29
